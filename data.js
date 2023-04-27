@@ -22,7 +22,7 @@ const data = [
     temperatur: 0,
   },
   {
-    id: 2,
+    id: 3,
     patientid: 2,
     andningsfrekvens: 0,
     syremättnad: 1,
@@ -33,7 +33,7 @@ const data = [
     temperatur: 1,
   },
   {
-    id: 2,
+    id: 4,
     patientid: 2,
     andningsfrekvens: 0,
     syremättnad: 1,
@@ -44,7 +44,7 @@ const data = [
     temperatur: 3,
   },
   {
-    id: 2,
+    id: 5,
     patientid: 2,
     andningsfrekvens: 0,
     syremättnad: 1,

@@ -22,20 +22,25 @@ const counts = () => {
   return countArray;
 };
 
-//create line chart
+//define
 let mBorderwidth = 6;
 let mTension = 0.2;
+
+//create line chart
 let mChart = new Chart(ctx, {
   type: "line",
   data: {
+    //använder counts för att skapa array med "mätning 1 2 3 " etc
     labels: counts(),
     datasets: [
       {
         label: "Andningsfrekvens",
+        //hämtar alla värden ur data arrayen, för key "andningsfrekvens"
         data: data.map((value) => value.andningsfrekvens),
         borderColor: "#488f31",
         backgroundColor: "#488f31",
         borderWidth: mBorderwidth,
+        //hur mycket bezier curve man vill ha
         tension: mTension,
       },
       {
@@ -97,7 +102,7 @@ let mChart = new Chart(ctx, {
         ticks: {
           stepSize: 1, // Increment between values
           callback: (value) => {
-            return value.toFixed(0); // Returns the value with zero decimal places
+            return value.toFixed(0); // tar bort decimal från värden på y axeln.
           },
         },
       },
