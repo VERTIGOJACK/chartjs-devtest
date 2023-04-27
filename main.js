@@ -7,8 +7,10 @@ import data from "./data.js";
 
 const app = document.querySelector("#app");
 const canvas = document.querySelector("#chart");
+
 canvas.width = 800;
 canvas.height = 400;
+
 const ctx = canvas.getContext("2d");
 
 //return array of counts from length
