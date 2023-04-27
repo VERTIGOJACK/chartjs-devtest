@@ -1,19 +1,27 @@
+//kör "npm install" i terminalen
+//sen kör "npm run dev"
+
+//importera paket från npm
 import { Chart } from "chart.js/auto";
+//importera data från annan .js fil (istället för api)
 import data from "./data.js";
 
 //växla mellan enkel och avancerad graf?
-//logga vilken tid som mätningen gjordes
+//logga vilken tid som mätningen gjordes?
 //färgschema för graf https://www.learnui.design/tools/data-color-picker.html#single
 
+//hämta html element
 const app = document.querySelector("#app");
 const canvas = document.querySelector("#chart");
 
+//sätt höjd bredd på canvas
 canvas.width = 800;
 canvas.height = 400;
 
+//hämta canvas kontext
 const ctx = canvas.getContext("2d");
 
-//return array of counts from length
+//funktion som returnerar array med "mätning1, mätning2" etc.
 const counts = () => {
   let countArray = [];
   for (let index = 1; index < data.length + 1; index++) {
@@ -22,15 +30,15 @@ const counts = () => {
   return countArray;
 };
 
-//define
+//värden som kommer återanvändas
 let mBorderwidth = 6;
 let mTension = 0.2;
 
-//create line chart
+//skapa chart
 let mChart = new Chart(ctx, {
   type: "line",
   data: {
-    //använder counts för att skapa array med "mätning 1 2 3 " etc
+    //använder counts funktionen ovan
     labels: counts(),
     datasets: [
       {
