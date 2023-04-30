@@ -38,10 +38,11 @@ h1 {
 
 #app {
   max-width: 1280px;
+  min-width: 800px;
+  min-height: 400px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: whitesmoke;
 }
 
 .logo {
@@ -83,9 +84,31 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  max-width: 1280px;
+  padding: 2rem;
+  overflow: hidden;
+}
 
-#chart {
+.chart {
   background-color: white;
+}
+
+/* .top {
+  transform-origin: top center;
+}
+.bot {
+  transform-origin: bottom center;
+} */
+
+.hide {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
 }
 
 @media (prefers-color-scheme: light) {

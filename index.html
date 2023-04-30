@@ -9,7 +9,11 @@
   </head>
   <body>
     <div id="app">
-      <canvas id="chart"></canvas>
+      <div class="chart-container">
+        <input type="checkbox" name="toggle" id="toggle-chart" />
+        <canvas class="chart top" id="simple-chart"></canvas>
+        <canvas class="chart bot hide" id="advanced-chart"></canvas>
+      </div>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
