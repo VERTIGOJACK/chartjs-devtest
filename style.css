@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
@@ -109,6 +109,14 @@ button:focus-visible {
   position: fixed;
   transform: scale(0);
   opacity: 0;
+}
+
+.options-container {
+  display: flex;
+  margin: 8px;
+  gap: 4px;
+  align-items: center;
+  font-size: large;
 }
 
 @media (prefers-color-scheme: light) {
