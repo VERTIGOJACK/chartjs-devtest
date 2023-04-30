@@ -95,19 +95,19 @@ button:focus-visible {
 
 .chart {
   background-color: white;
+  transition: all 0.3s linear;
 }
 
-/* .top {
+.top {
   transform-origin: top center;
 }
 .bot {
   transform-origin: bottom center;
-} */
+}
 
 .hide {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  transform: scaleY(0);
   opacity: 0;
 }
 
